@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <title>ComfWear Produktside</title>
 </head>
 <body>
@@ -11,7 +12,7 @@
         <header class="box">
             <nav>
                 <ul>
-                    <li><a href="#">mer</a></li>
+                    <li><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i>mer</a></li>
                 </ul>
             </nav>
             <a class="logo" href="index.html">
@@ -19,34 +20,38 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="bruker.html">bruker</a></li>
-                    <li><a href="#"></a>hjerte</href></li>
-                    <li><a href="#"></a>kurv</li>
+                    <li><a href="bruker.html"><i class="fa-regular fa-user" style="color: #00646a;"></i>bruker</a></li>
+                    <li><a href="#"><i class="fa-regular fa-heart" style="color: #00646a;"></i>hjerte</a></li>
+                    <li><a href="#">kurv</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <nav class="navigasjon">
-                <ul><a href=".">Womens</a></ul>
-                <ul><a href=".">Sneakers</a></ul>
-                <ul><a href=".">Sneakers High</a></ul>
+                <ul>
+                    <li><a href=".">Womens</a></li>
+                    <li><a href=".">Sneakers</a></li>
+                    <li><a href=".">Sneakers High</a></li>
+                </ul>
             </nav>
             <aside>
                 <p>Filter(0)</p>
             </aside>
-            <a class="tilbake" href="."> 
-                <img src="." alt="Tilbake">
-            </a>
+            <div>
+                <a href="index.html">Tilbake</a>
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
             <div class="skonamn">Sko merke namn</div>
             <section class="produktbilder">
-                <section class="småe">
+                <h6>Pictures</h6>
+                <figure class="småe">
                     <img src="." alt="Bilde1">
                     <img src="." alt="Bilde2">
                     <img src="." alt="Bilde3">
-                </section>
-                <section class="stort">
+                </figure>
+                <figure class="stort">
                     <img src="." alt="Bilde4">
-                </section>
+                </figure>
             </section>
             <section class="omprodukt">
                     <h5>Price 1400</h5>
@@ -54,18 +59,26 @@
                     <p>Secure payment<br>
                         Return policy</p>
             </section>
+            <section>
+                <h5>Produkt details <i class="fa-solid fa-chevron-down"></i></h5>
+                <h5>Reviews<i class="fa-solid fa-chevron-down"></i></h5>
+            </section>
+            <span><i class="fa-regular fa-heart" style="color: #00646a;"></i></span>
             <section class="morelikethis">
                 <h4>More like this</h4>
-                <li class="more" onclick="openModal('Bilde 1')">
-                    <img src="." alt="Bilde 1">
-                </li>
+                <figure class="morelikethisbilder">
+                    <img src="." alt="bilde">
+                    <img src="." alt="bilde">
+                    <img src="." alt="bilde">
+                    <img src="." alt="bilde">
+                </figure>
             </section>
         </main>
         <footer>
-            <section class="download">
+            <figure class="download">
                 <img src="." alt="Apple">
                 <img src="." alt="Google">
-            </section>
+            </figure>
             <section>
                 <section class="aboutus">
                     <h4>About us</h4>
