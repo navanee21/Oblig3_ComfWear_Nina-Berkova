@@ -1,0 +1,246 @@
+body{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 0px;
+    margin: 0;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "main" "footer";
+}
+
+header{
+    grid-column: 1/ span 1;
+    grid-row: 1/ span 1;
+}
+
+main{
+    grid-column: 1/ span 1;
+    grid-row: 2/ span 1;
+}
+
+footer{
+    grid-column: 1/ span 1;
+    grid-row: 3/ span 1;
+}
+
+.box{
+    display: flex;
+    margin-top: 4rem;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.logo img{
+    width: 150px;
+    height: auto;
+}
+
+.navigasjon-høgre, .navigasjon-venstre{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.fa-ellipsis-vertical, .fa-user, .fa-heart, .fa-cart-shopping{
+    padding: 5px;
+    margin: 5px;
+}
+
+.søkefelt{
+    background-color: white;
+    border: rgba(0, 82, 87, 1);
+    border-radius: 8px;
+    border-width: 1px;
+    margin-top: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.søk-button, .søk-input{
+    border-radius: 8px;
+    border-color: rgba(0, 82, 87, 1);
+    border-width: 1px;
+}
+
+.ekstra{
+    color: white;
+    margin: 20px 0px;
+    background-color: rgba(0, 82, 87, 0.7);
+    font-size: 2.4vw;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px;
+}
+
+.hovudbilete{
+    background-image: url(/Users/ninaberkova/Desktop/W/Oblig3_ComfWear_Nina-Berkova/img/hovedbilete.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 240px;
+    width: auto;
+    color: white;
+    position: relative;
+}
+.hovudbilete p{
+    font-size: 2.6vw;
+    position: absolute;
+    bottom: 60px;
+    left: 50px;
+    font-weight: 600;
+}
+.hovudbilete h2{
+    font-size: 4vw;
+    position: absolute;
+    bottom: 85px;
+    right: 50%;
+    font-weight: 700;
+}
+.underbilete{
+    display: flex;
+    margin-top: 0.5rem;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.underbilete img{
+    width: 100%;
+    height: auto;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.seksjoner{
+    font-size: 4vw;
+    font-weight: 100;
+    font-family: inter;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.bilder{
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.bilder img{
+    border-radius: 30px;
+    padding: 20px 17px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+.explore{
+    font-style: italic;
+    font-weight: 100;
+    font-family: inter;
+    color: grey;
+}
+.explore1, .explore2{
+    color: rgba(245, 245, 245, 1);
+}
+.explore1{
+    background-image: url(/Users/ninaberkova/Desktop/W/Oblig3_ComfWear_Nina-Berkova/img/yourstyle.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 140px;
+    width: auto;
+}
+.explore2{
+    background-image: url(/Users/ninaberkova/Desktop/W/Oblig3_ComfWear_Nina-Berkova/img/getfit.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 140px;
+    width: auto;
+}
+.lastened{
+    background-color: rgba(217, 217, 217, 1);
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.download{
+    width: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment{
+    background-color: rgba(217, 217, 217, 1);
+    display: flex;
+    margin: 10px 0px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.fa-apple-pay, .fa-google-pay, .fa-cc-paypal, .fa-cc-visa, .fa-cc-mastercard{
+    margin: 10px 0px;
+}
+
+.login{
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.mail{
+    background-color: rgba(207, 207, 207, 0.495);
+    border-color: rgb(204, 204, 204);
+    border-width: 1px;
+    border-radius: 5px;
+    font-weight: 100;
+    font-size: 16px;
+    color: rgba(167, 167, 167, 0.888);
+    padding: 5px 15px;
+}
+
+.continue{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 0px 8px;
+    max-height: 20px;
+}
+.slutt{
+    background-color: rgba(0, 82, 87, 0.4);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    font-size: small;
+    font-family: inter;
+    gap: 15px;
+}
+.aboutus, .help, .ral{
+    text-align: left;
+}
+
+.sosialemedier{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px;
+    align-items: flex-end;
+}
+
+.aboutus h4, .help h4, .ral h4{
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.aboutus p, .help p, .ral p{
+    font-size: 8px;
+}
