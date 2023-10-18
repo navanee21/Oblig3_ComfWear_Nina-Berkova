@@ -36,7 +36,7 @@ footer{
 
 /* Legger til alle HTML klassene som ikkje skal vises på mobil-versjon*/
 
-.d-seksjoner, .d-navigasjon-høgre, .d-flervalg{
+.d-seksjoner, .d-navigasjon-høgre, .d-flervalg, .d-explore, .d-nede{
     display: none;
 }
 
@@ -126,11 +126,12 @@ footer{
     margin-top: 0.5rem;
     flex-direction: row;
     justify-content: space-between;
+    margin: 8px 10px;
 }
 
 .underbilete img{
-    width: 80px;
-    height: 80px;
+    width: 20vw;
+    height: 20vw;
     object-fit: cover;
 }
 /* Endrer på womens mens og popular slik at den er tilpassa prototypen, dei er ikkje linka til noko anna nettside*/
@@ -154,8 +155,8 @@ footer{
 .bilder img{
     border-radius: 30px;
     padding: 20px 17px;
-    width: 60px;
-    height: 60px;
+    width: 21vw;
+    height: 21vw;
     object-fit: cover;
 }
 /* endrer på teksten i eskplore klassen*/
@@ -236,7 +237,7 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
 }
 /*Endrer på utsjånaden til .mail klasen, altså input class mail*/
@@ -255,8 +256,7 @@ footer{
     background-color: black;
     color: white;
     border-radius: 5px;
-    padding: 0px 8px;
-    max-height: 20px;
+    margin-left: 5px;
 }
 /*slutt er heile nederste delen, dissa options vil ikkje vere linka til noko på denna versjonen av nettsida*/
 .slutt{
@@ -549,11 +549,12 @@ footer{
 /*Byrja på media q*/
 
 @media only screen and (min-width: 600px) {
+    /*Definerer grid colonner og rows*/
     #container {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "header header header" "main main main" "footer footer footer";
     }
-
+    /*bestemmer kvar kvart element skal starte og slutte*/
     header{
         grid-column-start: 1;
         grid-column-end: 4;
@@ -573,8 +574,8 @@ footer{
         grid-row-start: 3;
         grid-row-end: 4;
     }
-
-    .navigasjon-venstre, .navigasjon-høgre, .søkefelt{
+    /*Samla på alle klassane som ikkje skal visast på desktop*/
+    .navigasjon-venstre, .navigasjon-høgre, .søkefelt, .underbilete, .remove, .login, .lastened, .payment{
         display: none;
     }
     
@@ -633,13 +634,116 @@ footer{
         margin-right: 40vw;
         margin-bottom: 0;
     }
-    /*.d-flervalg{
-        display: flex;
-    }
-    .d-flervalg a{
-        background-color: rgba(114, 114, 114, 0.576);
-        height: 5vw;
-        width: 2vw;
-    }*/
 
+    .seksjoner{
+        font-size: 2vw;
+        justify-content: center;
+        gap: 15vw;
+    }
+    
+    .bilder{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .bilder img{
+        border-radius: 25px;
+        width: 16vw;
+        height: 16vw;
+    }
+    .boxexplore{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .explore1, .explore2{
+        height: 30vw;
+        width: 40vw;
+        margin: 10px 10px;
+    }
+    .d-nede{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .d-login{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0px 10px 30px;
+        gap: 20px;
+    }
+    .d-login p, .d-login a{
+        font-size: 2vw;
+    }
+
+    .d-nede a{
+        color: black;
+    }
+    .d-mail{
+        width: 21vw;
+        background-color: rgba(217, 217, 217, 0.332);
+        border-width: 1px;
+        border-radius: 10px;
+        border-color: rgb(217, 217, 217);
+        padding: 10px;
+        font-size: 1.5vw;
+    }
+    .d-continue{
+        background-color: black;
+        color: white;
+        font-size: 2vw;
+        border-radius: 10px;
+        margin-left: 5px;
+        height: 3vw;
+    }
+    .d-venstre{
+        display: flex;
+        flex-direction: column;
+    }
+    .d-download{
+        margin: 10px 10px;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(217, 217, 217, 1);
+        height: 32vw;
+        width: 42vw;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .d-mobil{
+        margin: 0 20px;
+    }
+    .d-applegoogle{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0 20px 0  0;
+    }
+    .d-applegoogle img{
+        width: 15vw;
+        height: auto;
+    }
+    .d-payment{
+        background-color: rgba(217, 217, 217, 1);
+        height: 8vw;
+        width: 42vw;
+        margin: 10px 10px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .slutt{
+        justify-content: space-around;
+    }
+    .aboutus p, .help p, .ral p {
+        font-size: 1.5vw;
+        font-weight: lighter;
+    }
+
+    .aboutus h4, .help h4, .ral h4 {
+        font-size: 2vw;
+    }
 }
