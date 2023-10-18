@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,300&display=swap');
+
 body{
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -6,14 +7,18 @@ body{
     margin: 0;
 }
 
+/* Definere grid og elementene i dei ulike rows */
+
 #container{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "header" "main" "footer";
 }
+
 .effekt{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 header{
     grid-column: 1/ span 1;
     grid-row: 1/ span 1;
@@ -29,6 +34,13 @@ footer{
     grid-row: 3/ span 1;
 }
 
+/* Legger til alle HTML klassene som ikkje skal vises på mobil-versjon*/
+
+.d-seksjoner, .d-navigasjon-høgre, .d-flervalg{
+    display: none;
+}
+
+/* Lager header til både index.html og produkt.html*/
 .box{
     display: flex;
     margin-top: 4rem;
@@ -49,7 +61,7 @@ footer{
     margin: 0;
 }
 
-.fa-ellipsis-vertical, .fa-user, .fa-heart, .fa-cart-shopping{
+.fa-ellipsis-vertical, .fa-user, .fa-heart, .fa-cart-shopping, .fa-image{
     padding: 5px;
     margin: 5px;
 }
@@ -70,7 +82,9 @@ footer{
     border-color: rgba(0, 82, 87, 1);
     border-width: 1px;
 }
+/* INDEX.HTML*/
 
+/* Begynner på main på index.html*/
 .ekstra{
     color: white;
     margin: 20px 0px;
@@ -81,29 +95,32 @@ footer{
     padding: 10px;
 }
 
+/* Laga hovudbilde som en background image, endrer på tekstren utifra prototypen og plasserer teksten der den skal ver v.h.a. flexbox */
+
 .hovudbilete{
     background-image: url(/Users/ninaberkova/Desktop/W/Oblig3_ComfWear_Nina-Berkova/img/hovedbilete.jpg);
     background-position: center center;
     background-size: cover;
-    height: 240px;
+    height: 50vw;
     width: auto;
     color: white;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 .hovudbilete p{
     font-size: 2.6vw;
-    position: absolute;
-    bottom: 60px;
-    left: 50px;
     font-weight: 600;
+    margin-bottom: 8vw;
 }
 .hovudbilete h2{
     font-size: 4vw;
-    position: absolute;
-    bottom: 85px;
-    right: 50%;
     font-weight: 700;
+    margin-right: 43vw;
 }
+/* Plassere underbileta ved hjelp av flexbox, og endrer storleiken osv. Her vil det eine bilete vere til produktside linka*/
 .underbilete{
     display: flex;
     margin-top: 0.5rem;
@@ -112,12 +129,11 @@ footer{
 }
 
 .underbilete img{
-
     width: 80px;
     height: 80px;
     object-fit: cover;
 }
-
+/* Endrer på womens mens og popular slik at den er tilpassa prototypen, dei er ikkje linka til noko anna nettside*/
 .seksjoner{
     font-size: 4vw;
     font-weight: 100;
@@ -127,7 +143,7 @@ footer{
     justify-content: space-between;
     padding: 10px 20px;
 }
-
+/* Endrer på bilde storleiken og gir dei funksjonen wrap slik at dei kan bli plassert under/ved sida av kvarandre ved endring av skjerm width*/
 .bilder{
     padding: 5px 20px;
     display: flex;
@@ -142,36 +158,51 @@ footer{
     height: 60px;
     object-fit: cover;
 }
+/* endrer på teksten i eskplore klassen*/
 .explore{
     font-size: 4vw;
     font-style: italic;
     font-weight: 100;
     font-family: 'Montserrat', sans-serif;
     color: grey;
+    margin-left: 20px;
 }
+/*Legger dei to explore klassene .exp.1 og exp.2 i flex-direction:columt; slik at dei ligger vertikalt i forhold til kavrandre*/
 .explore1, .explore2{
     color: rgba(245, 245, 245, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 5px;
+    margin-left: auto; 
+    margin-right: auto;/* legger dei horizontalt midt på skjermen*/
 }
+
+/*Gir explore dei to ulike bakgrunnsbilda, og endrer på storleikenog utseende*/
 .explore1{
     background-image: url(/Users/ninaberkova/Desktop/W/Oblig3_ComfWear_Nina-Berkova/img/yourstyle.jpg);
     background-position: center center;
     background-size: cover;
-    height: 140px;
-    width: auto;
+    height: 43vw;
+    width: 88vw;
+    margin-bottom: 20px;
 }
+
 .explore2{
     background-image: url(/Users/ninaberkova/Desktop/W/Oblig3_ComfWear_Nina-Berkova/img/getfit.jpg);
     background-position: center center;
     background-size: cover;
-    height: 140px;
-    width: auto;
+    height: 43vw;
+    width: 88vw;
 }
-
+/*Plasserer teksten som ønskja i forhold til backgroud-image*/
 .explore1 h3, .explore1 p, .explore2 h3, .explore2 p{
     display: flex;
     flex-direction: row;
     align-content: center;
+    margin: 1.5vw 2vw;
 }
+/*Laga last den seksjonen*/
 .lastened{
     background-color: rgba(217, 217, 217, 1);
     margin: 30px 0;
@@ -180,13 +211,14 @@ footer{
     align-items: center;
     justify-content: space-between;
 }
+/*gjer det slik at dei to download moglegheita vil vere i column som barneelement til download, men fortsatt vere i row i forhold til .lastened*/
 .download{
     width: 100px;
     height: auto;
     display: flex;
     flex-direction: column;
 }
-
+/*Laga en enkel payment seksjon med metodene i row med fordelt space rundt*/
 .payment{
     background-color: rgba(217, 217, 217, 1);
     display: flex;
@@ -194,11 +226,11 @@ footer{
     flex-direction: row;
     justify-content: space-around;
 }
-
+/*gir payment methods ikonene meir plass over og under*/
 .fa-apple-pay, .fa-google-pay, .fa-cc-paypal, .fa-cc-visa, .fa-cc-mastercard{
     margin: 10px 0px;
 }
-
+/*Endrer på plasseringa til login klassen*/
 .login{
     margin: 10px 10px;
     display: flex;
@@ -207,6 +239,7 @@ footer{
     justify-content: space-between;
 
 }
+/*Endrer på utsjånaden til .mail klasen, altså input class mail*/
 .mail{
     background-color: rgba(207, 207, 207, 0.495);
     border-color: rgb(204, 204, 204);
@@ -217,7 +250,7 @@ footer{
     color: rgba(167, 167, 167, 0.888);
     padding: 5px 15px;
 }
-
+/*Endrer på button class continue*/
 .continue{
     background-color: black;
     color: white;
@@ -225,27 +258,22 @@ footer{
     padding: 0px 8px;
     max-height: 20px;
 }
+/*slutt er heile nederste delen, dissa options vil ikkje vere linka til noko på denna versjonen av nettsida*/
 .slutt{
     background-color: rgba(0, 82, 87, 0.4);
     display: flex;
     flex-direction: row;
-    text-align: center;
-    justify-content: space-around;
-    font-size: small;
     font-family: 'Montserrat', sans-serif;
     gap: 15px;
 }
-.aboutus, .help, .ral{
-    text-align: left;
-}
-
+/*sender sm ikona ned vertikalt med align-items flex-end*/
 .sosialemedier{
     display: flex;
     flex-direction: row;
     margin: 10px 10px;
     align-items: flex-end;
 }
-
+/*Endra på headingsa og p i .slutt*/
 .aboutus h4, .help h4, .ral h4{
     font-size: 15px;
     font-weight: lighter;
@@ -254,7 +282,7 @@ footer{
 .aboutus p, .help p, .ral p{
     font-size: 8px;
 }
-
+/*laga mini navigasjonen og legger det på row med filter(ikkje funksjonell)*/
 .boxmedfilter{
     display: flex;
     flex-direction: row;
@@ -262,9 +290,7 @@ footer{
     padding: 10px 20px;
     
 }
-.navigason{
-    display: flex;
-}
+/*Endrer på plasseringa og usjåanden til fonten i .produktnavigasjon klassen i tilleg til å legge til bakgrunnsfargen og dens storleik til filter*/
 .produktnavigasjon{
     display: flex;
     flex-direction: row;
@@ -287,32 +313,32 @@ footer{
     border-radius: 10px;
     font-size: 2.8vw;
 }
-
+/*Laga en tilbakeknapp som sender oss i denne versjonen til index.html, og endrer plasseringa vha padding og margin*/
 .tilbake{
     width: 25px;
     margin-left: 20px;
     padding: 20px;
 }
-
+/*produktets navn, ufonksjonell */
 .namn{
     padding-left: 20px;
     font-weight: 200;
     font-size: 4vw;
 }
-
+/*To barnelement som skal ligge attmed kvarandre sentret og horisontalt*/
 .produktbilder{
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 4.3px;
 }
-
+/*Sikkert litt vanskelig å forstå, ga litt rare klasse navn, dette skal stå for bilde en, bilde to, bilde tre*/
 .ben, .bto, .btre{
     background-color: rgba(185, 185, 185, 0.476);
     width: 23vw;
     height: 23vw;
 }
-
+/*plasserer bilda i forhold til kvarandre, samt som endrar storleik*/
 .småe{
     display: flex;
     flex-direction: column;
@@ -320,19 +346,21 @@ footer{
     gap: 4.3px;
     margin: 0;
 }
+/*Endrer storleikenpå store bilde*/
 .stort{
     background-color: rgba(185, 185, 185, 0.476);
     width: 71vw;
     height: 71vw;
     margin: 0;
 }
-
+/*All produkt informasjon legge eg vertikalt under kvarandre, med gap på 30px mellom dei*/
 .omprodukt{
     display: flex;
     flex-direction: column;
     gap: 30px;
     margin: 10px 30px;
 }
+/*Endra på dei ulike delane av produktinformasjon*/
 .omprodukt h5{
     font-weight: 100;
     margin: 0;
@@ -340,19 +368,28 @@ footer{
 .omprodukt div{
     margin: 10px 0;
 }
+/*Laga eit eige foreldreelement for farga, ikkej funksjonell*/
 .farger{
     display: flex;
     flex-direction: row;
     margin-left: 30px;
     gap: 10px;
 }
-
+/*endrer på designet og storleiken til boksa*/
 .en, .to, .tre, .fire{
     background-color: rgba(185, 185, 185, 0.476);
     width: 25px;
     height: 25px;
     border-radius: 3px;
+    font-size: 10px;
 }
+/*Gir farge nr 2 effekten av å vere den vi valte*/
+.to{
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+}
+/*Lager ein ufonksjonell velg størrelse box*/
 .select{
     display: flex;
     flex-direction: row;
@@ -368,7 +405,7 @@ footer{
     color: black;
     text-decoration: none;
 }
-
+/*atb-add to basket, ikkje funksjonell box*/
 .atb{
     background-color: rgba(0, 82, 87, 0.7);
     width: 40vw;
@@ -378,11 +415,13 @@ footer{
     font-weight: 600;
     text-decoration: none;
 }
+/*Foreldrelement til atb og secure payment */
 .siste{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
+/*endra på utsjånaden til secure payment-sp*/
 .sp{
     font-size: 2.5vw;
     background-color: rgba(185, 185, 185, 0.218);
@@ -390,10 +429,12 @@ footer{
     height: 35px;
     margin: 0;
 }
+/*pdr-product details revies- gjer om til flex og legger dei under kvarndre*/
 .pdr{
     display: flex;
     flex-direction: column;
 }
+/*gir begge barnelementa samme eigendomma*/
 .pd, .reviews{
     border-bottom-style: solid;
     border-width: 1px;
@@ -402,6 +443,7 @@ footer{
     font-size: 4vw;
     font-weight: 100;
 }
+/*legger alle more like this bilda attmed kvarandre*/
 .morelikethisbilder{
     display: flex;
     flex-direction: row;
@@ -411,22 +453,193 @@ footer{
     margin: 0;
 
 }
+/*Endre more like this-mlt teksten*/
 .mlt{
-    margin: 10px opx;
+    margin: 10px 0px;
     font-weight: 100;
     font-size: 4vw;
     border-bottom-style: solid;
     border-width: 1px;
     padding: 10px;
 }
+/*Definerer storleiken til dei fire bileta*/
 .mlten, .mltto, .mlttre, .mltfire{
     background-color: rgba(185, 185, 185, 0.218);
     width: 19vw;
     height: 19vw;
     margin-bottom: 10px;
 }
-
+/* endrer headeren til bruker.html-berre logo img*/
 .logobruker img{
     width: 150px;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+/*foreldre med bruker ikon og back to shopping muligheten på ein row*/
+.backtoshopping{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    margin: 40px 20px;
+}
+/*Endrer sjølvet back to shopping funksjonen, linka til index.html, og deretter fonten til den (.navigasjonback a)*/
+.navigasjonback{
+    background-color: rgba(124, 124, 124, 1);
+    font-size: 20px;
+    width: 50vw;
+    height: 8vw;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigasjonback a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    gap: 10px;
+}
+/*Ufunksjonnel hei, navn */
+.hello{
+    font-weight: 100;
+    font-size: 5vw;
+    margin-left: 20px;
+}
+/*(ingen href lagt til)foreldre element til alle option på bruker sida, endrer alt av font med å spesifisere alle <a></a> */
+.brukeropplysninger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 70px;
+}
+
+.brukeropplysninger a{
+    background-color: rgba(0, 82, 87, 0.4);
+    width: 60vw;
+    height: 8vw;
+    margin: 10px 0px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    gap: 20px;
+}
+/*endrer den eine boksen så det ser betre ut*/
+.persondetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+/*Dei fire andre kan eg endre på samme måte, siden dei har alle ikon og tekst*/
+.optionen, .optionto, .optiontre, .optionfire{
+    padding-left: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+/*Byrja på media q*/
+
+@media only screen and (min-width: 600px) {
+    #container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
+
+    header{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    main {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    footer{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .navigasjon-venstre, .navigasjon-høgre, .søkefelt{
+        display: none;
+    }
+    
+    .box{
+        border-bottom: solid;
+        border-radius: 1px;
+        border-color: rgba(155, 155, 155, 0.68);
+    }
+    .logo img{
+        width: 40vw;
+        height: auto;
+    }
+
+    .d-navigasjon-høgre{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-content: center;
+    }
+    .d-navigasjon-høgre li{ 
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    .d-seksjoner{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 30px 30px;
+    }
+    .d-seksjoner a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .ekstra{
+        color: white;
+        margin: 20px 0px;
+        background-color: rgba(0, 82, 87, 0.7);
+        font-size: 1.4vw;
+        font-weight: 400;
+        text-align: center;
+        padding: 5px;
+    }
+    .hovudbilete p{
+        font-size: 2.6vw;
+        font-weight: 300;
+        margin-bottom: 8vw;
+    }
+    .hovudbilete h2{
+        font-size: 4vw;
+        font-weight: 500;
+        margin-right: 40vw;
+        margin-bottom: 0;
+    }
+    /*.d-flervalg{
+        display: flex;
+    }
+    .d-flervalg a{
+        background-color: rgba(114, 114, 114, 0.576);
+        height: 5vw;
+        width: 2vw;
+    }*/
+
 }
