@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,300&display=swap');
 body{
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -10,7 +11,9 @@ body{
     grid-template-columns: 1fr;
     grid-template-areas: "header" "main" "footer";
 }
-
+.effekt{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 header{
     grid-column: 1/ span 1;
     grid-row: 1/ span 1;
@@ -105,20 +108,20 @@ footer{
     display: flex;
     margin-top: 0.5rem;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .underbilete img{
-    width: 100%;
-    height: auto;
+
     width: 80px;
     height: 80px;
     object-fit: cover;
 }
+
 .seksjoner{
     font-size: 4vw;
     font-weight: 100;
-    font-family: inter;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -140,9 +143,10 @@ footer{
     object-fit: cover;
 }
 .explore{
+    font-size: 4vw;
     font-style: italic;
     font-weight: 100;
-    font-family: inter;
+    font-family: 'Montserrat', sans-serif;
     color: grey;
 }
 .explore1, .explore2{
@@ -161,6 +165,12 @@ footer{
     background-size: cover;
     height: 140px;
     width: auto;
+}
+
+.explore1 h3, .explore1 p, .explore2 h3, .explore2 p{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
 }
 .lastened{
     background-color: rgba(217, 217, 217, 1);
@@ -222,7 +232,7 @@ footer{
     text-align: center;
     justify-content: space-around;
     font-size: small;
-    font-family: inter;
+    font-family: 'Montserrat', sans-serif;
     gap: 15px;
 }
 .aboutus, .help, .ral{
