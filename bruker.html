@@ -11,28 +11,69 @@
         <link rel="stylesheet" href="css/style.css">
         <title>ComfWear</title>
     </head>
-    <bodyc>
+    <body>
         <div class="brukercontainer">
             <header>
                 <a class="logobruker" href="index.html">
                     <img src="img/LOGO-3.png" alt="Logo">
                 </a>
+                <section class="d-box">
+                    <nav>
+                        <ul class="navigasjon-høgre">
+                            <li><a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: #00646a;"></i></a></li>
+                        </ul>
+                    </nav>
+                    <a class="logo" href="index.html">
+                        <img src="img/LOGO-3.png" alt="Logo">
+                    </a>
+                    <nav class="d-navigasjon">
+                        <ul class="d-navigasjon-høgre">
+                            <li><input class="søk-input" type="text" placeholder="Search">
+                            <button class="søk-button" style="border:none;"><i class="fa-solid fa-magnifying-glass" style="color: #00646a;"></i></button></li>
+                            <li><a href="#"><i class="fa-solid fa-image" style="color: #00646a;"></i></a></li>   
+                            <li><a href="bruker.html"><i class="fa-regular fa-user" style="color: #00646a;"></i></a></li>
+                            <li><a href="#"><i class="fa-regular fa-heart" style="color: #00646a;"></i></a></li>
+                            <li><a href="#"><i class="fa-regular fa-cart-shopping" style="color: #00646a;"></i></a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul class="navigasjon-venstre">
+                            <li><a href="bruker.html"><i class="fa-regular fa-user" style="color: #00646a;"></i></a></li>
+                            <li><a href="#"><i class="fa-regular fa-heart" style="color: #00646a;"></i></a></li>
+                            <li><a href="#"><i class="fa-regular fa-cart-shopping" style="color: #00646a;"></i></a></li>
+                        </ul>
+                    </nav> 
+                </section> 
             </header>
             <main>
+                <section class="d-seksjoner">
+                    <a href="#">Women</a>
+                    <a href="#">Men</a>
+                    <a href="#">Sale</a>
+                    <a href="#">Brands</a>
+                    <a href="#">Inspiration</a>
+                    <a href="#">Popular</a>
+                </section>
                 <section class="backtoshopping">
                     <nav class="navigasjonback">
                         <a href="index.html"><i class="fa-solid fa-chevron-left"></i>Back to shopping</a>
                     </nav>
                     <i class="fa-solid fa-user"></i>
                 </section>
-            <h3 class="hello">Hello Name</h3>
-            <section class="brukeropplysninger">
-                <a class="persondetails" href="#">Personal details</a>
-                <a class="optionen" href="#"><i class="fa-solid fa-box"></i>Orders and shipment</a>
-                <a class="optionto" href="#"><i class="fa-solid fa-shield-halved"></i>Help and security</a>
-                <a class="optiontre" href="#"><i class="fa-solid fa-gear"></i>Settings</a>
-                <a class="optionfire" href="#"><i class="fa-regular fa-circle-question"></i>Contact us</a>
-            </section>
+                <h3 class="hello">Hello Name</h3>
+                <div class="d-bruker">
+                    <div class="brukeropplysninger">
+                        <a class="persondetails" href="#">Personal details</a>
+                        <a class="optionen" href="#"><i class="fa-solid fa-box"></i>Orders and shipment</a>
+                        <a class="optionto" href="#"><i class="fa-solid fa-shield-halved"></i>Help and security</a>
+                        <a class="optiontre" href="#"><i class="fa-solid fa-gear"></i>Settings</a>
+                        <a class="optionfire" href="#"><i class="fa-regular fa-circle-question"></i>Contact us</a>
+                    </div>
+                    <div class="d-orders">
+                        <h3>Your order (0)</h3>
+                        <h5>No orders found</h5>
+                    </div>
+                </div>
             </main>
             <footer>
                 <section class="lastened">
@@ -57,6 +98,36 @@
                         <button class="continue" style="border:none;">Continue</button>
                     </section>
                 </section>
+                <div class="d-nede">
+                    <section class="d-login">
+                        <p>Join the ComfWear family!<br>
+                        Sign up!</p>
+                        <section class="d-input">
+                            <input class="d-mail" type="text" placeholder="Your email/Phone number">
+                            <button class="d-continue" style="border:none;">Continue</button>
+                        </section>
+                        <p>Already have an account?</p>
+                        <a href="#">Sign in</a>
+                    </section>
+                    <section class="d-høgre">
+                        <section class="d-download">
+                                <figure class="d-mobil">
+                                    <i class="fa-regular fa-mobile-screen-button fa-8x"></i>
+                                </figure>
+                                <figure class="d-applegoogle">
+                                    <img src="img/download-on-the-app-store-badge.png" alt="app store">
+                                    <img src="img/google.png" alt="google play">
+                                </figure>
+                        </section>
+                        <section class="d-payment">
+                            <i class="fa-brands fa-apple-pay fa-2x"></i>
+                            <i class="fa-brands fa-google-pay fa-2x"></i>
+                            <i class="fa-brands fa-cc-paypal fa-2x"></i>
+                            <i class="fa-brands fa-cc-visa fa-2x"></i>
+                            <i class="fa-brands fa-cc-mastercard fa-2x"></i>
+                        </section>
+                    </section>
+                </div>
                 <section class="slutt">
                     <section class="aboutus">
                         <h4>About us</h4>

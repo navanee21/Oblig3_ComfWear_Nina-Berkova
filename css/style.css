@@ -36,7 +36,7 @@ footer{
 
 /* Legger til alle HTML klassene som ikkje skal vises på mobil-versjon*/
 
-.d-seksjoner, .d-navigasjon-høgre, .d-flervalg, .d-explore, .d-nede{
+.d-seksjoner, .d-navigasjon-høgre, .d-flervalg, .d-explore, .d-nede, .d-tilbake, .d-box, .d-b-seksjoner, .d-orders{
     display: none;
 }
 
@@ -334,9 +334,9 @@ footer{
 }
 /*Sikkert litt vanskelig å forstå, ga litt rare klasse navn, dette skal stå for bilde en, bilde to, bilde tre*/
 .ben, .bto, .btre{
-    background-color: rgba(185, 185, 185, 0.476);
     width: 23vw;
     height: 23vw;
+    object-fit: cover;
 }
 /*plasserer bilda i forhold til kvarandre, samt som endrar storleik*/
 .småe{
@@ -347,12 +347,16 @@ footer{
     margin: 0;
 }
 /*Endrer storleikenpå store bilde*/
-.stort{
-    background-color: rgba(185, 185, 185, 0.476);
+.bfire{
     width: 71vw;
     height: 71vw;
+    object-fit: cover;
+}
+
+.stort{
     margin: 0;
 }
+
 /*All produkt informasjon legge eg vertikalt under kvarandre, med gap på 30px mellom dei*/
 .omprodukt{
     display: flex;
@@ -362,6 +366,7 @@ footer{
 }
 /*Endra på dei ulike delane av produktinformasjon*/
 .omprodukt h5{
+    font-size: 3vw;
     font-weight: 100;
     margin: 0;
 }
@@ -404,16 +409,19 @@ footer{
 .selectsize{
     color: black;
     text-decoration: none;
+    font-size: 3vw;
 }
 /*atb-add to basket, ikkje funksjonell box*/
 .atb{
     background-color: rgba(0, 82, 87, 0.7);
     width: 40vw;
-    height: 9vw;
+    height: 8vw;
     text-align: center;
+    padding-top: 10px;
     color: white;
     font-weight: 600;
     text-decoration: none;
+    font-size: 4.5vw;
 }
 /*Foreldrelement til atb og secure payment */
 .siste{
@@ -425,8 +433,8 @@ footer{
 .sp{
     font-size: 2.5vw;
     background-color: rgba(185, 185, 185, 0.218);
-    width: 100px;
-    height: 35px;
+    width: 20vw;
+    height: 6.5vw;
     margin: 0;
 }
 /*pdr-product details revies- gjer om til flex og legger dei under kvarndre*/
@@ -575,17 +583,17 @@ footer{
         grid-row-end: 4;
     }
     /*Samla på alle klassane som ikkje skal visast på desktop*/
-    .navigasjon-venstre, .navigasjon-høgre, .søkefelt, .underbilete, .remove, .login, .lastened, .payment{
+    .navigasjon-venstre, .navigasjon-høgre, .søkefelt, .underbilete, .remove, .login, .lastened, .payment, .filter, .tilbake, .backtoshopping, .hello, .logobruker{
         display: none;
     }
     
     .box{
         border-bottom: solid;
-        border-radius: 1px;
+        border-width: 1px;
         border-color: rgba(155, 155, 155, 0.68);
     }
     .logo img{
-        width: 40vw;
+        width: 30vw;
         height: auto;
     }
 
@@ -616,7 +624,7 @@ footer{
 
     .ekstra{
         color: white;
-        margin: 20px 0px;
+        margin: 10px 0px;
         background-color: rgba(0, 82, 87, 0.7);
         font-size: 1.4vw;
         font-weight: 400;
@@ -746,4 +754,135 @@ footer{
     .aboutus h4, .help h4, .ral h4 {
         font-size: 2vw;
     }
+
+    .produktnavigasjon li a{
+        font-size: 1.5vw;
+    }
+
+
+    .d-tilbake{
+        text-decoration: none;
+        display: flex;
+    }
+
+    .navigasjon{
+        display: flex;
+        flex-direction: row;
+        gap: 3vw;
+        align-items: baseline;
+    }
+
+    .produktbilder img{
+        width: 25vw;
+        height: 30vw;
+    }
+
+    .produktbilder{
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 14.4px;
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+    .småe{
+        max-height: 90vw;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 14.4px;
+    }
+
+    .btre{
+        padding-bottom: 5px;
+    }
+    .namn{
+        font-size: 2vw;
+    }
+
+    .til-d{
+        display: flex;
+        flex-direction: column;
+        max-height: 90vw;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .en, .to, .tre, .fire{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .farger{
+        gap: 4vw;
+    }
+    .select{
+        width: 22vw;
+        height: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .selectsize, .omprodukt h5, .sp, .pd, .reviews{
+        font-size: 2vw;
+    }
+
+    .atb{
+        font-size: 2.5vw;
+        height: 5vw;
+        width: 23vw;
+    }
+
+    .omprodukt{
+        gap: 10px;
+    }
+    .pd, .reviews{
+        width: 28vw;
+    }
+    .d-box{
+        display: flex;
+        border-bottom: solid;
+        border-width: 1px;
+        display: flex;
+        margin-top: 4rem;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+    }
+    .brukeropplysninger a{
+        width: 30vw;
+        height: 4vw;
+        border-radius: 2px;
+    }
+    .brukeropplysninger .optionen{
+        background-color: rgba(0, 82, 87, 1);
+    }
+
+    .brukeropplysninger .optionto, .brukeropplysninger .optiontre, .brukeropplysninger .persondetails, .brukeropplysninger .optionfire{
+        background-color: rgba(148, 148, 148, 1);
+    }
+    .d-bruker{
+        display: flex;
+        flex-direction: row;
+        border-bottom: solid;
+        border-width: 8px;
+        border-color: rgba(148, 148, 148, 0.276);
+        margin: 20px 0px;
+    }
+    .d-orders{
+        display: flex;
+        flex-direction: column;
+    }
+    .d-orders h3{
+        border-bottom: solid;
+        width: 50vw;
+        padding-bottom: 8px;
+        border-width: 1px;
+    }
+
+    .d-orders h5{
+        padding-left: 5vw;
+        font-weight: 100;
+        color: rgba(148, 148, 148, 0.71);
+    }
+
 }
