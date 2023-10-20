@@ -36,7 +36,7 @@ footer{
 
 /* Legger til alle HTML klassene som ikkje skal vises på mobil-versjon*/
 
-.d-seksjoner, .d-navigasjon-høgre, .d-flervalg, .d-explore, .d-nede, .d-tilbake, .d-box, .d-b-seksjoner, .d-orders{
+.d-seksjoner, .d-navigasjon-høgre, .d-flervalg, .d-explore, .d-nede, .d-tilbake, .d-box, .d-b-seksjoner, .d-orders, .d-produktbilder{
     display: none;
 }
 
@@ -64,6 +64,10 @@ footer{
 .fa-ellipsis-vertical, .fa-user, .fa-heart, .fa-cart-shopping, .fa-image{
     padding: 5px;
     margin: 5px;
+    text-shadow: 2px 2px 1px #0000006e;
+}
+.fa-magnifying-glass{
+    text-shadow: 2px 2px 1px #0000006e;
 }
 
 .søkefelt{
@@ -87,6 +91,7 @@ footer{
 /* Begynner på main på index.html*/
 .ekstra{
     color: white;
+    text-shadow: 2px 2px 1px #000000df;
     margin: 20px 0px;
     background-color: rgba(0, 82, 87, 0.7);
     font-size: 2.4vw;
@@ -101,9 +106,11 @@ footer{
     background-image: url(/Users/ninaberkova/Desktop/W/Oblig3_ComfWear_Nina-Berkova/img/hovedbilete.jpg);
     background-position: center center;
     background-size: cover;
+    filter: drop-shadow(2px 2px 1px #0000006e);
     height: 50vw;
     width: auto;
     color: white;
+    text-shadow: 2px 2px 3px #000000df;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -138,6 +145,7 @@ footer{
 .seksjoner{
     font-size: 4vw;
     font-weight: 100;
+    text-shadow: 2px 2px 2px #0000003c;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: row;
@@ -154,10 +162,16 @@ footer{
 
 .bilder img{
     border-radius: 30px;
-    padding: 20px 17px;
+    margin: 20px 17px;
     width: 21vw;
     height: 21vw;
     object-fit: cover;
+    filter: drop-shadow(2px 2px 3px #0000003a);
+}
+
+.bilder a img{
+    border: solid;
+    border-width: 1px;
 }
 /* endrer på teksten i eskplore klassen*/
 .explore{
@@ -172,6 +186,7 @@ footer{
 .explore1, .explore2{
     color: rgba(245, 245, 245, 1);
     display: flex;
+    filter: drop-shadow(2px 2px 1px #0000006e);
     flex-direction: column;
     justify-content: flex-end;
     border-radius: 5px;
@@ -408,17 +423,20 @@ footer{
 
 .selectsize{
     color: black;
+    text-shadow: 2px 2px 3px #0000006e;
     text-decoration: none;
     font-size: 3vw;
 }
 /*atb-add to basket, ikkje funksjonell box*/
 .atb{
     background-color: rgba(0, 82, 87, 0.7);
+    filter: drop-shadow(2px 2px 1px #0000006e);
     width: 40vw;
     height: 8vw;
     text-align: center;
     padding-top: 10px;
     color: white;
+    text-shadow: 2px 2px 1px #0000006e;
     font-weight: 600;
     text-decoration: none;
     font-size: 4.5vw;
@@ -532,6 +550,7 @@ footer{
 
 .brukeropplysninger a{
     background-color: rgba(0, 82, 87, 0.4);
+    filter: drop-shadow(2px 2px 1px #0000006e);
     width: 60vw;
     height: 8vw;
     margin: 10px 0px;
@@ -543,6 +562,7 @@ footer{
 }
 /*endrer den eine boksen så det ser betre ut*/
 .persondetails{
+    filter: drop-shadow(2px 2px 1px #0000006e);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -550,6 +570,7 @@ footer{
 }
 /*Dei fire andre kan eg endre på samme måte, siden dei har alle ikon og tekst*/
 .optionen, .optionto, .optiontre, .optionfire{
+    filter: drop-shadow(2px 2px 1px #0000006e);
     padding-left: 10px;
     align-items: center;
     justify-content: flex-start;
@@ -583,7 +604,7 @@ footer{
         grid-row-end: 4;
     }
     /*Samla på alle klassane som ikkje skal visast på desktop*/
-    .navigasjon-venstre, .navigasjon-høgre, .søkefelt, .underbilete, .remove, .login, .lastened, .payment, .filter, .tilbake, .backtoshopping, .hello, .logobruker{
+    .navigasjon-venstre, .navigasjon-høgre, .søkefelt, .underbilete, .remove, .login, .lastened, .payment, .filter, .tilbake, .backtoshopping, .hello, .logobruker, .produktbilder{
         display: none;
     }
     
@@ -772,17 +793,20 @@ footer{
         align-items: baseline;
     }
 
-    .produktbilder img{
+    .d-produktbilder img{
+        background-color: rgba(185, 185, 185, 0.218);
         width: 25vw;
         height: 30vw;
     }
 
-    .produktbilder{
+    .d-produktbilder{
+        display: flex;
         flex-direction: row;
-        align-items: flex-end;
-        gap: 14.4px;
-        justify-content: flex-start;
+        max-width: 54vw;
+        flex-wrap: wrap;
+        gap: 1vw;
         margin-left: 20px;
+    
     }
     .småe{
         max-height: 90vw;
