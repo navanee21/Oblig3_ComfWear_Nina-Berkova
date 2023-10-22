@@ -100,6 +100,21 @@ footer{
     padding: 10px;
 }
 
+/*Ikkje funksjonell chatbox*/
+.chat{
+    background-color: rgba(153, 186, 188, 1);
+    width: 11vw;
+    height: 9vw;
+    border-radius: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    bottom: 10vw;
+    right: 5vw;
+    cursor: pointer;
+}
 /* Laga hovudbilde som en background image, endrer på tekstren utifra prototypen og plasserer teksten der den skal ver v.h.a. flexbox */
 
 .hovudbilete{
@@ -641,6 +656,13 @@ footer{
     .d-seksjoner a{
         text-decoration: none;
         color: black;
+    }
+    .chat{
+        width: 7vw;
+        height: 6vw;
+        border-radius: 3vw;
+        bottom: 5vw;
+        right: 5vw;
     }
 
     .ekstra{
