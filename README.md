@@ -47,3 +47,9 @@ https://unsplash.com/photos/GM1sJRVX61A
 
 vw kalkulator
 https://web-development.space/tools/px-to-vw/
+
+css validator 
+https://jigsaw.w3.org/css-validator/
+
+HTML validator
+https://validator.w3.org
